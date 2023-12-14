@@ -1,0 +1,254 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #f4f2ee;
+}
+
+.footer{
+    height:auto;
+    position:relative;
+    line-height:180%;
+    padding:0 10px;
+}
+
+
+/* Navigation */
+
+.header{
+    background-color: white;
+    padding: .5em;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "logo menu-links";
+}
+
+.logo{
+    grid-area: logo;
+    width: 100px;
+    height: auto;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+
+.logo-image{
+    max-width: 100%;
+    height: auto;
+}
+
+.menu-links{
+    grid-area: menu-links;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.menu-link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-link-text{
+    text-align: center;
+}
+
+
+/* home page */
+
+.content-container{
+    padding: .7em;
+}
+
+.start-text-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.contentOne{
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0em;
+    gap: .7em;
+}
+.contentTwo{
+    background-color:antiquewhite;
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0em;
+    gap: .7em;
+}
+
+.start-img{
+    grid-area: img;
+    max-width: 100%;
+    height: auto;
+}
+
+.start-img2{
+    grid-area: img;
+    max-width: auto;
+    height: 25em;
+}
+
+.btnAboutUs{
+    max-width: 10em;
+}
+
+/* About us page */
+.aboutUs-contentOne{
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0em;
+    gap: .7em;
+}
+.aboutUs-contentTwo{
+    background-color:antiquewhite;
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0em;
+    gap: .7em;
+}
+
+.logo-box{
+    margin: 1em;
+    display: flex; 
+    justify-content: center;
+}
+
+.logo-image-AboutUs{
+    max-width: 50%;
+    height: auto;
+}
+
+/* Price calculator page */
+
+.price-content-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.priceCalculatorBox{
+    display: grid;
+    grid-template-areas: 
+        'left instructions instructions instructions right'
+        'left input input input right';
+    
+    gap: 2em;
+}
+
+.priceCalculatorInstructions{
+    grid-area: instructions;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.priceCalculatorInputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: input;
+    gap: 1em;
+}
+
+.priceCalculatorResult{
+    grid-area: result;
+}
+
+.priceCalculatorInput{
+    display: flex;
+    flex-direction: column;
+}
+.priceCalculatorInput1{
+    display: flex;
+}
+
+.btnCalculate{
+    display: flex;
+}
+
+.priceCalculatorResult{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.reultDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+}
+
+.resultHeader{
+    margin-block-start: 0;
+    margin-block-end: 0
+}
+
+/* align-items: center;
+    flex-direction: column; */
+
+/* Media query */
+
+@media screen and (min-width: 800px) {
+    .header{
+        display: grid;
+        grid-template-columns: 1fr 6fr 1fr;
+        grid-template-areas: "logo menu-links void";
+    }
+    .contentOne{
+        background-color: aliceblue;
+        display: grid;
+        grid-template-columns: 5fr 2fr;
+        grid-template-areas: "Text img";
+    }
+    .contentTwo{
+        background-color:antiquewhite;
+        display: grid;
+        grid-template-columns: 2fr 5fr;
+        grid-template-areas: "img Text";
+    }
+    .start-img{
+        grid-area: img;
+        max-width: 100%;
+        height: auto;
+    }
+    .start-img2{
+        grid-area: img;
+        max-width: 100%;
+        height: auto;
+    }
+
+    
+}
+
+@media screen and (min-width: 600px) {
+    .priceCalculatorBox{
+        border: solid 2px;
+        width: 50%;
+        display: grid;
+        grid-template-areas: 
+            'left instructions instructions instructions right'
+            'left input input input right';
+        
+        gap: 2em;
+    }
+
+    .reultDiv{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        border: solid 2px;
+        padding: 1em;
+    }
+}
